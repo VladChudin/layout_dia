@@ -5,15 +5,91 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0"
+
     />
-    <title>Dia</title>
+    <title>Air</title>
     <link
       rel="stylesheet"
       href="./styles/main.scss"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+    >
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1>Dia</h1>
+    <header class="header">
+      <div class="header__top">
+        <a href="#" class="header__logo">
+          <img src="/src/images/logo/Logo.png" alt="Air logo">
+        </a>
+
+        <a href="#" class="header__burger"></a>
+
+        <nav class="header__nav">
+          <ul class="nav__list">
+            <li class="nav__items"><a href="#about">About us</a></li>
+            <li class="nav__items"><a href="#services">Services</a></li>
+            <li class="nav__items"><a href="#testimonials">Testimonials</a></li>
+            <li class="nav__items"><a href="#contact">Contact Us</a></li>
+          </ul>
+        </nav>
+
+        <a href="#" class="header__button">Hire Us</a>
+      </div>
+      <div class="header__container">
+        <div class="header__content">
+          <h1 class="content__title">Strategic Agency</h1>
+          <p class="content__paragraph">
+            We believe in the power of bold ideas that<br>can solve business challenges.
+          </p>
+          <a href="#" class="content__button">Learn more</a>
+        </div>
+        <div class="header__hero">
+          <div class="hero__photo">
+            <div class="hero__slider">
+              <div class="hero__arrow">
+                <button class="hero__arrow--left"></button>
+                <button class="hero__arrow--right"></button>
+              </div>
+
+              <div class="hero__info">
+                <span class="hero__tag">INTRO</span>
+                <p class="hero__text">By the same illusion which lifts the horizon.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="content container">
+      <section>
+        <h2 class="section-title">Who we are</h2>
+      </section>
+      <section>
+        <h2 class="section-title">Our expertise</h2>
+      </section>
+      <section>
+        <h2 class="section-title">Process</h2>
+      </section>
+      <section>
+        <h2 class="section-title">Testimonials</h2>
+      </section>
+      <section>
+        <h2 class="section-title">Vision, Passion, Results</h2>
+      </section>
+    </main>
+    <footer>
+      <div>
+        <h2 class="section-title">Send us a message</h2>
+      </div>
+      <div>
+        <h2 class="section-title">Contact us</h2>
+      </div>
+    </footer>
     <script src="scripts/main.js"></script>
   </body>
 </html>
