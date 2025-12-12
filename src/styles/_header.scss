@@ -1,42 +1,28 @@
 .header {
   display: flex;
-  background-color: $grey;
-  color: #fff;
-  font-family: $font-base;
-  padding: 20px 0 0;
   flex-direction: column;
+
+  padding: 20px 0;
+  border-bottom-right-radius: $border-radius;
   border-bottom-left-radius: $border-radius;
-  border-bottom-right-radius: 3$border-radius;
 
+  font-family: $font-base;
+  color: #fff;
 
-  @include tablet {
-    padding: 20px 0 0;
-  }
-
-  @include desktop {
-    padding: 48px 0 0;
-  }
-
-  @include big-desktop {
-    padding-left: auto;
-  }
-
-  @include wide {
-    width: 1600px;
-  }
+  background-color: $grey;
 
   &__top {
     display: flex;
     align-items: center;
-    padding: 0 20px 0;
+    padding: 0 20px;
 
     @include tablet {
-      padding: 0 41px 0;
+      padding: 0 41px;
     }
 
     @include desktop {
-      padding: 0 55px 0;
-      grid-column: 1 / -1;
+      max-width: 1600px;
+      padding: 0 55px;
     }
   }
 
@@ -50,36 +36,43 @@
   }
 
   &__button {
-    margin-left: auto;
     position: relative;
-    color: #fff;
-    text-decoration: none;
+
+    margin-left: auto;
+
     font-size: 13px;
     font-weight: 700;
-    letter-spacing: 3px;
+    color: #fff;
+    text-decoration: none;
     text-transform: uppercase;
+    letter-spacing: 3px;
 
     &::after {
       content: "";
+
       position: absolute;
       bottom: -4px;
       left: 0;
+
       width: 67px;
       height: 2px;
-      background-color: $blue;
       border-radius: 4px;
+
+      background-color: $blue;
     }
   }
 
   &__burger {
+    cursor: pointer;
+
     width: 24px;
     height: 24px;
     margin-left: 32px;
+    border: none;
+
     background-image: url('../images/icons/Menu.png');
     background-repeat: no-repeat;
     background-position: center;
-    cursor: pointer;
-    border: none;
 
     @include desktop {
       display: none;
@@ -90,66 +83,49 @@
     display: none;
   }
 
-  @media (min-width: 1024px) {
-    &__nav {
-      display: flex;
-      height: 20px;
-      margin-left: auto;
+  .header__container {
+    display: grid;
+    @include desktop {
+      max-width: 1600px;
+      grid-template-columns: repeat(12, 1fr);
     }
 
-    .nav__list {
-      display: flex;
-      justify-content: space-between;
-      font-weight: 700;
-      font-size: 13px;
-      line-height: 150%;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      align-items: center;
-    }
-
-    .nav__items {
-      display: flex;
-      margin-left: 48px;
-
-      &:first-child {
-        margin-left: 0;
-      }
-    }
   }
 
   &__content {
     flex-direction: column;
     justify-content: center;
-    padding: 0 20px 0;
+
     margin-top: 48px;
     margin-bottom: 48px;
+    padding: 0 20px;
 
     @include tablet {
-      padding: 0 41px 0;
       margin-top: 56px;
       margin-bottom: 147px;
+      padding: 0 41px;
     }
 
     @include desktop {
-      width: 490px;
+      grid-column: 1 / span 5;
       height: 355px;
-      padding: 0 55px 0;
       margin-top: 165px;
       margin-bottom: 205px;
+      padding: 0 55px;
     }
 
     .content__title {
-      font-weight: 600;
-      font-size: 52px;
-      line-height: 120%;
-      letter-spacing: -2px;
       margin-bottom: 32px;
 
+      font-size: 52px;
+      font-weight: 600;
+      line-height: 120%;
+      letter-spacing: -2px;
+
       @include tablet {
+        margin-bottom: 24px;
         font-size: 64px;
         line-height: 68px;
-        margin-bottom: 24px;
       }
 
       @include desktop {
@@ -159,24 +135,27 @@
 
     .content__paragraph {
       font-family: $font-alt;
-      font-weight: 400;
       font-size: 18px;
+      font-weight: 400;
       line-height: 150%;
-      letter-spacing: 0px;
+      letter-spacing: 0;
     }
 
     .content__button {
-      background-color: $blue;
-      color: #fff;
-      width: 100%;
-      height: 50px;
-      border-radius: $button-radius;
       display: flex;
       align-items: center;
       justify-content: center;
+
+      width: 100%;
+      height: 50px;
+      margin-top: 72px;
+      border-radius: $button-radius;
+
       font-size: 15px;
       font-weight: 600;
-      margin-top: 72px;
+      color: #fff;
+
+      background-color: $blue;
 
       @include tablet {
         width: 264px;
@@ -192,40 +171,101 @@
   &__hero {
     width: 100%;
 
+    @include desktop {
+      grid-column: 6 / -1;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    &__nav {
+      display: flex;
+      height: 20px;
+      margin-left: auto;
+    }
+
+    .nav__list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 150%;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
+    .nav__items {
+      display: flex;
+      margin-left: 48px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+
+  @include tablet {
+    padding: 20px 0;
+  }
+
+  @include desktop {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    padding: 48px 0;
   }
 }
 
 .hero__photo {
   position: relative;
+  overflow: hidden;
+
   width: 100%;
   height: 390px;
   border-radius: $border-radius;
-  background-size: cover;
+
+  background-image: url('../images/background/hero_mb.png');
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url('../images/background/hero_mb.png');
-  overflow: hidden;
+  background-size: cover;
 
   @include tablet {
     background-image: url('../images/background/hero_tb.png');
   }
 
   @include desktop {
-    background-image: url('../images/background/hero_desk.png');
+    border-radius: 0;
+    border-bottom-right-radius: $border-radius;
+    border-top-left-radius: $border-radius;
+    position: absolute;
+    content: "";
+    bottom: 0;
     height: 680px;
-    grid-column: 6 / span 6;
+    background-image: url('../images/background/hero_desk.png');
+  }
+
+  @include wide {
+    background-image: url('../images/background/wide.png');
+  }
+
+  @include ultra {
+    background-image: url('../images/background/ultra.png');
   }
 }
 
 .hero__slider {
   position: absolute;
-  width: 280px;
-  height: 116px;
-  display: flex;
-  flex-direction: column;
+  right: 0;
   bottom: 0;
   left: 20px;
-  right: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 280px;
+  height: 116px;
   margin-bottom: 24px;
 
 
@@ -236,18 +276,22 @@
   }
 
   @include desktop {
+    bottom: 0;
+    left: 48px;
+    margin-bottom: 48px;
+
     flex-direction: row;
     align-items: center;
+
     width: 370px;
     height: 68px;
-    left: 48px;
-    bottom: 0;
   }
 }
 
 .hero__arrow {
   display: flex;
   flex-direction: row;
+
   width: 80px;
   height: 32px;
   margin-bottom: 16px;
@@ -257,20 +301,22 @@
   }
 
   &--left {
-    background-repeat: no-repeat;
-    border: none;
     width: 32px;
     height: 32px;
+    border: none;
+
     background-image: url('../images/icons/arrow-left.png');
+    background-repeat: no-repeat;
   }
 
   &--right {
-    background-repeat: no-repeat;
-    border: none;
-    margin-left: 16px;
     width: 32px;
     height: 32px;
+    margin-left: 16px;
+    border: none;
+
     background-image: url('../images/icons/arrow-right.png');
+    background-repeat: no-repeat;
   }
 }
 
@@ -292,7 +338,7 @@
   .hero__text {
     font-family: $font-alt;
     font-size: 14px;
-    line-height: 140%;
     font-weight: 400;
+    line-height: 140%;
   }
 }
