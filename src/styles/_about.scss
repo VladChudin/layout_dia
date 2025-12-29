@@ -1,0 +1,51 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 120px 20px;
+
+  background-color: $light-grey;
+
+  @include tablet {
+    padding: 148px 40px;
+  }
+
+  @include desktop {
+    padding: 148px 155px;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+
+    font-family: $font-base;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 150%;
+    color: $title-blue;
+    text-align: center;
+    letter-spacing: 0;
+
+    @include tablet {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__paragraph {
+    font-family: $font-alt;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 150%;
+    color: $text;
+    text-align: center;
+    letter-spacing: 0;
+
+    @include desktop {
+      width: 720px;
+    }
+
+    @include wide {
+      width: 755px;
+    }
+  }
+}
