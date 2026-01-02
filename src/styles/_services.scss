@@ -65,6 +65,7 @@
 }
 
 .process__title-2 {
+  width: 280px;
   margin-bottom: 24px;
 
   font-family: $font-base;
@@ -74,7 +75,6 @@
   color: $title-blue;
   letter-spacing: 0;
   vertical-align: middle;
-  width: 280px;
 
   @include tablet {
     width: 264px;
@@ -128,8 +128,8 @@
 
 .card-2 {
   @include tablet {
-    grid-column: 4 / span 3;
     transform: translateY(-50%);
+    grid-column: 4 / span 3;
   }
 
   @include desktop {
@@ -150,8 +150,8 @@
 
 .card-4 {
   @include tablet {
-    grid-column: 4 / span 3;
     transform: translateY(-50%);
+    grid-column: 4 / span 3;
   }
 
   @include desktop {
