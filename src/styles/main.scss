@@ -68,6 +68,7 @@ html {
 body {
   min-height: 100%;
   line-height: 1.5;
+  background-color: #F9FAFB;
 }
 
 a:where([class]) {
@@ -144,3 +145,6 @@ li {
 @import 'about';
 @import '../styles/about_us';
 @import 'services';
+@import 'testimonials';
+@import 'vision';
+@import 'footer';

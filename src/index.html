@@ -161,18 +161,123 @@
         </div>
       </section>
       <section class="testimonials" id="testimonials">
-        <h2 class="testimonials__title">Testimonials</h2>
+        <div class="testimonials__container">
+          <div class="testimonials__title">
+            <h2 class="first__title">Testimonials</h2>
+            <h1 class="second__title">What people say</h1>
+          </div>
+          <div class="testimonials__card people-1">
+            <div class="card__img-1"></div>
+            <div class="card__comment">
+              <div class="quoute"></div>
+              <p class="comment">AIR’s ideas are refreshing and out of the box. Authentic team that focuses on the important path of the brand.</p>
+            </div>
+            <div class="people__name">
+              <h2 class="name">Tal Gilad</h2>
+              <p class="job">Teach for America</p>
+            </div>
+          </div>
+          <div class="testimonials__card people-2">
+            <div class="card__img-2"></div>
+            <div class="card__comment">
+              <div class="quoute"></div>
+              <p class="comment">AIR is an exceptional agency that leads with creative talent, first-class account servicing.</p>
+            </div>
+            <div class="people__name">
+              <h2 class="name">Azadeh Hawkins</h2>
+              <p class="job">Hawkins Consulting</p>
+            </div>
+          </div>
+          <div class="testimonials__card people-3">
+            <div class="card__img-3"></div>
+            <div class="card__comment">
+              <div class="quoute"></div>
+              <p class="comment">AIR raises the agency bar to stratospheric heights on both creative output and client service.</p>
+            </div>
+            <div class="people__name">
+              <h2 class="name">Michel Grover</h2>
+              <p class="job">Hulu</p>
+            </div>
+          </div>
+        </div>
       </section>
-      <section>
-        <h2 class="section-title">Vision, Passion, Results</h2>
+      <section class="vision" id ="vision">
+        <div class="vision__container">
+          <h2 class="vision__title">Vision, Passion, Results</h2>
+          <p class="vision__text">
+            We are sure that first-rate job is possible only if all three components are united.
+          </p>
+          <a href="#" class="vision__button">Apply</a>
+        </div>
       </section>
     </main>
-    <footer>
-      <div>
-        <h2 class="section-title">Send us a message</h2>
-      </div>
-      <div>
-        <h2 class="section-title">Contact us</h2>
+    <footer class="footer" id="contact">
+      <div class="footer__content">
+        <div class="footer__form">
+          <h2 class="form__title">Send us a message</h2>
+          <form action="#" class="form__container">
+            <input
+              type="email"
+              class="form__input"
+              name = "email"
+              placeholder="Your email"
+              required
+            >
+
+            <input
+              type="text"
+              class="form__input"
+              name = "name"
+              placeholder="Your name"
+              required
+            >
+
+            <input
+              type="text"
+              class="form__input form__input--message"
+              name = "message"
+              placeholder="Your message"
+              required
+            >
+
+            <button type="submit" class="form__button">
+              Send
+            </button>
+          </form>
+        </div>
+        <div class="footer__contact">
+          <h2 class="contact__title">Contact us</h2>
+          <div class="contact__titles">
+            <h3 class="title">Call us</h3>
+            <p class="contact__text">654 321 987</p>
+          </div>
+          <div class="contact__titles">
+            <h3 class="title">Visit us</h3>
+            <a href="https://surl.li/srzxjd" class="contact__text">2905 West Drive, Buffalo Grove</a>
+          </div>
+          <div class="contact__titles contact__title-3">
+            <h3 class="title title-3">Our socials</h3>
+            <div class="icon__box">
+              <a href="https://www.facebook.com/?locale=ru_RU" class="icon facebook"></a>
+              <a href="https://x.com/?lang=ru" class="icon twitter"></a>
+              <a href="https://www.instagram.com/" class="icon instagram"></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__nav">
+          <img
+            src="/src/images/logo/Logo.png"
+            alt="Air logo"
+            class="footer__logo"
+          >
+          <ul class="footer__nav-list">
+            <li class="nav__links"><a href="#about">About us</a></li>
+            <li class="nav__links"><a href="#">Home</a></li>
+            <li class="nav__links"><a href="#services">Services</a></li>
+            <li class="nav__links"><a href="#testimonials">Testimonials</a></li>
+            <li class="nav__links"><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
       </div>
     </footer>
     <script src="scripts/main.js"></script>

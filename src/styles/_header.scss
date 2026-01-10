@@ -56,6 +56,7 @@
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 3px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     &::after {
       content: "";
@@ -70,6 +71,10 @@
 
       background-color: $blue;
     }
+
+    &:hover {
+      transform: scale(1.04);
+    }
   }
 
   &__burger {
@@ -83,9 +88,14 @@
     background-image: url('../images/icons/Menu.png');
     background-repeat: no-repeat;
     background-position: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     @include desktop {
       display: none;
+    }
+
+    &:hover {
+      transform: scale(1.03);
     }
   }
 
@@ -167,6 +177,7 @@
       color: #fff;
 
       background-color: $blue;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
 
       @include tablet {
         width: 264px;
@@ -175,6 +186,10 @@
 
       @include desktop {
         margin-top: 83px;
+      }
+
+      &:hover {
+        transform: scale(1.04);
       }
     }
   }
@@ -212,9 +227,15 @@
     .nav__items {
       display: flex;
       margin-left: 48px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
 
       &:first-child {
         margin-left: 0;
+      }
+
+      &:hover {
+        transform: scale(1.03);
+        color: orange;
       }
     }
   }

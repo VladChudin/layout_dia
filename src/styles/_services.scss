@@ -5,8 +5,6 @@
 
   padding: 120px 20px;
 
-  background-color: $light-grey;
-
   @include tablet {
     column-gap: 30px;
     padding: 148px 40px;
@@ -21,16 +19,20 @@
 .process-cards__container {
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   @include tablet {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     column-gap: 30px;
+    max-width: 570px;
   }
 
   @include desktop {
     grid-template-columns: repeat(12, 1fr);
     height: 690px;
+    padding-top: 132px;
+    max-width: 1148px;
   }
 }
 
@@ -99,21 +101,34 @@
 }
 
 .process__card {
-  max-width: 360px;
+  width: 100%;
+  max-width: 320px;
   height: 264px;
   margin-bottom: 24px;
   border-radius: $border-radius;
-
   background-color: #fff;
+
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 
   @include tablet {
     max-width: 300px;
     margin-bottom: 30px;
   }
 
-  @include wide {
+  @include desktop {
+    max-width: 264px;
     margin-bottom: 20px;
   }
+}
+
+.process__card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-2:hover,
+.card-4:hover {
+  transform: translateY(-50%) scale(1.04);
 }
 
 .card-1 {
