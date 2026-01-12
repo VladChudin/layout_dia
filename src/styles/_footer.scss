@@ -2,28 +2,30 @@
   display: flex;
   flex-direction: column;
   align-items: start;
-  background-color: $grey;
-  color: #fff;
+
+  padding: 0 20px;
   border-top-left-radius: $border-radius;
   border-top-right-radius: $border-radius;
 
-  padding: 0 20px;
+  color: #fff;
+
+  background-color: $grey;
 
   @include tablet {
     padding: 0 40px;
   }
 
   @include desktop {
-    padding: 0 55px;
     margin: 0 auto;
+    padding: 0 55px;
   }
 
   .footer__content {
     display: flex;
     flex-direction: column;
     align-items: start;
-    max-width: 1148px;
 
+    max-width: 1148px;
     margin-top: 72px;
     margin-bottom: 80px;
 
@@ -37,12 +39,12 @@
     @include desktop {
       grid-template-columns: repeat(12, 1fr);
       column-gap: 20px;
-      margin: 180px auto 80px auto;
+      margin: 180px auto 80px;
     }
 
     @include wide {
-      margin-bottom: 85px;
       column-gap: 30px;
+      margin-bottom: 85px;
     }
   }
 }
@@ -51,12 +53,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
   margin-bottom: 80px;
 
   @include tablet {
-    align-items: start;
     grid-column: 1 / span 4;
+    align-items: start;
     margin-bottom: 120px;
   }
 
@@ -66,15 +67,15 @@
 }
 
 .form__title {
-  font-family: $font-base;
-  font-weight: 600;
   max-height: 84px;
-  font-size: 32px;
-  line-height: 130%;
-  letter-spacing: 0px;
-  vertical-align: middle;
-
   margin-bottom: 48px;
+
+  font-family: $font-base;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: 0;
+  vertical-align: middle;
 
   @include tablet {
     max-height: 48px;
@@ -83,39 +84,38 @@
 }
 
 input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0px 1000px orange inset;
-  -webkit-text-fill-color: #fff;
-  transition: background-color 5000s ease-in-out 0s;
   border-radius: $button-radius;
+  -webkit-box-shadow: 0 0 0 1000px orange inset;
+  transition: background-color 5000s ease-in-out 0s;
+
+  -webkit-text-fill-color: #fff;
 }
 
 .form__input {
   width: 100%;
   height: 41px;
+  margin-bottom: 40px;
   border: none;
-  background: transparent;
-  outline: none;
   border-bottom: 2px solid #fff;
+
   color: #fff;
 
-  margin-bottom: 40px;
+  background: transparent;
+  outline: none;
 
-  @include tablet {
-    margin-bottom: 48px;
+  &::placeholder {
+    font-family: $font-base;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 100%;
+    color: #fff;
+    letter-spacing: 0;
+
+    opacity: 0.7;
   }
 
   &:hover {
     border-bottom: 2px solid $blue;
-  }
-
-  &::placeholder {
-    font-family: $font-base;
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 100%;
-    letter-spacing: 0px;
-    color: #fff;
-    opacity: 0.7;
   }
 
   .form__input--message {
@@ -125,24 +125,32 @@ input:-webkit-autofill {
       margin-bottom: 80px;
     }
   }
+
+  @include tablet {
+    margin-bottom: 48px;
+  }
 }
 
 .form__button {
   display: flex;
-  width: 100%;
-  height: 56px;
   align-items: center;
   justify-content: center;
-  color: #fff;
-  background-color: $blue;
+
+  width: 100%;
+  height: 56px;
   border: none;
   border-radius: $button-radius;
+
   font-family: $font-base;
-  font-weight: 600;
   font-size: 15px;
+  font-weight: 600;
   line-height: 100%;
-  letter-spacing: 0px;
+  color: #fff;
   text-align: center;
+  letter-spacing: 0;
+
+  background-color: $blue;
+
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 
   @include tablet {
@@ -154,7 +162,7 @@ input:-webkit-autofill {
   }
 
   &:hover {
-    transform: scale(1.04);
+    transform: scale(1.02);
   }
 }
 
@@ -162,7 +170,6 @@ input:-webkit-autofill {
   display: flex;
   flex-direction: column;
   align-items: start;
-
   margin-bottom: 80px;
 
   @include tablet {
@@ -177,15 +184,15 @@ input:-webkit-autofill {
   }
 
   .contact__title {
-    font-family: $font-base;
-    font-weight: 600;
     max-height: 48px;
-    font-size: 32px;
-    line-height: 130%;
-    letter-spacing: 0px;
-    vertical-align: middle;
-
     margin-bottom: 48px;
+
+    font-family: $font-base;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 130%;
+    letter-spacing: 0;
+    vertical-align: middle;
 
     @include tablet {
       margin-bottom: 56px;
@@ -196,7 +203,6 @@ input:-webkit-autofill {
     display: flex;
     flex-direction: column;
     align-items: start;
-
     margin-bottom: 40px;
 
     @include tablet {
@@ -204,16 +210,17 @@ input:-webkit-autofill {
     }
 
     .title {
-      font-family: $font-base;
-      font-weight: 700;
-      font-size: 13px;
-      line-height: 100%;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      opacity: 50%;
-      color: #fff;
-
       margin-bottom: 8px;
+
+      font-family: $font-base;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 100%;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+
+      opacity: 50%;
     }
 
     .title-3 {
@@ -222,11 +229,11 @@ input:-webkit-autofill {
 
     .contact__text {
       font-family: $font-alt;
-      font-weight: 600;
       font-size: 24px;
+      font-weight: 600;
       line-height: 150%;
-      letter-spacing: 0px;
       color: #fff;
+      letter-spacing: 0;
 
       &:hover {
         cursor: pointer;
@@ -248,9 +255,8 @@ input:-webkit-autofill {
   .icon {
     width: 32px;
     height: 32px;
-    transition: transform 0.3s ease;
-
     margin-left: 32px;
+    transition: transform 0.3s ease;
 
     &:first-child {
       margin-left: 0;
@@ -286,7 +292,6 @@ input:-webkit-autofill {
 .footer__logo {
   width: 46px;
   height: 28px;
-
   margin-bottom: 67px;
 
   @include tablet {
@@ -304,13 +309,13 @@ input:-webkit-autofill {
   align-items: start;
 
   @include tablet {
-    flex-direction: column;
     grid-column: 1 / -1;
+    flex-direction: column;
   }
 
   @include desktop {
-    align-items: center;
     flex-direction: row;
+    align-items: center;
   }
 }
 
@@ -321,23 +326,27 @@ input:-webkit-autofill {
 
 
   @include tablet {
-    height: 20px;
     flex-direction: row;
+    height: 20px;
+  }
+
+  @include desktop {
     margin-left: auto;
   }
 
   .nav__links {
+    margin-bottom: 24px;
+
     font-family: $font-base;
-    font-weight: 700;
     font-size: 13px;
+    font-weight: 700;
     line-height: 150%;
-    letter-spacing: 3px;
-    text-transform: uppercase;
     color: #fff;
     text-decoration: none;
-    transition: color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 3px;
 
-    margin-bottom: 24px;
+    transition: color 0.3s ease;
 
     @include tablet {
       margin-right: 40px;

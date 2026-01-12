@@ -56,6 +56,7 @@
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 3px;
+
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     &::after {
@@ -73,7 +74,7 @@
     }
 
     &:hover {
-      transform: scale(1.04);
+      transform: scale(1.03);
     }
   }
 
@@ -88,6 +89,7 @@
     background-image: url('../images/icons/Menu.png');
     background-repeat: no-repeat;
     background-position: center;
+
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     @include desktop {
@@ -95,8 +97,176 @@
     }
 
     &:hover {
-      transform: scale(1.03);
+      transform: scale(1.04);
     }
+  }
+
+  .menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: $grey;
+
+    transform: translateX(-100%);
+
+
+    transition:
+      transform 0.8s ease,
+      opacity 0.4s ease,
+      visibility 0.4s ease;
+
+
+    z-index: 1000;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu:target {
+    transform: translateX(0);
+
+  }
+
+  .menu__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 30px 40px;
+  }
+
+  .menu__close {
+    width: 20px;
+    height: 20px;
+
+    background-image: url('../images/icons/Icon-Close.png');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+
+  .menu__nav {
+    padding: 80px 40px;
+  }
+
+  .menu__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: $font-base;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+  .menu__items {
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+
+    transition: transform 0.4s ease;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+
+  .menu__items::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+
+    width: 0;
+    height: 2px;
+
+    background-color: #fff;
+
+    transform: translateX(-50%);
+    transition: width 0.4s ease;
+  }
+
+  .menu__items:hover::after {
+    width: 100%;
+  }
+
+  .menu__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    padding: 0 40px;
+    margin-top: auto;
+    margin-bottom: 100px;
+  }
+
+  .menu__title {
+    font-family: $font-base;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 50%;
+    margin-bottom: 16px;
+  }
+
+  .menu__text {
+    font-family: $font-alt;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0px;
+
+    margin-bottom: 32px;
+  }
+
+  .menu__icon {
+    display: flex;
+    flex-direction: row;
+    height: 32px;
+  }
+
+  .icons {
+    width: 32px;
+    height: 32px;
+    margin-right: 24px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .facebook {
+    background-image: url('../images/icons/facebook.png');
+  }
+
+  .twitter {
+    background-image: url('../images/icons/twitter.png');
+    transition: transform 0.3s ease;
+
+    &:hover {
+      background-image: url('../images/icons/twitter-1.png');
+    }
+  }
+
+  .instagram {
+    background-image: url('../images/icons/instagram.png');
   }
 
   &__nav {
@@ -177,6 +347,7 @@
       color: #fff;
 
       background-color: $blue;
+
       transition: transform 0.3s ease, box-shadow 0.3s ease;
 
       @include tablet {
@@ -189,7 +360,7 @@
       }
 
       &:hover {
-        transform: scale(1.04);
+        transform: scale(1.02);
       }
     }
   }

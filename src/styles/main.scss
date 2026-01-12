@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 *,
 ::before,
 ::after {
@@ -71,6 +75,10 @@ body {
   background-color: #F9FAFB;
 }
 
+body:has(.menu:target) {
+  overflow: hidden;
+}
+
 a:where([class]) {
   display: inline-flex;
 }
@@ -105,17 +113,6 @@ svg * {
 :where(table) {
   border-collapse: collapse;
   border-color: currentColor;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  ::before,
-  ::after {
-    scroll-behavior: auto !important;
-    transition-duration: 0.01ms !important;
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-  }
 }
 
 button,
